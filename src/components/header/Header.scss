@@ -1,0 +1,14 @@
+#app-header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  #menu-btn {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    color: white;
+    padding: 0px;
+  }
+}

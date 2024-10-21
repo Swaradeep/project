@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Project Readme file
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This document contains steps on how to setup and run this project in local machine
 
-## Available Scripts
+## Structure
 
-In the project directory, you can run:
+`server` folder contgains the code for backend
 
-### `npm start`
+## Setup React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### cd to the root directory of the project and run `npm install` to install th dependencies for the react application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Run `npm start` to start the server on port `3000`
 
-### `npm test`
+## Setup Backend server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Run `cd server`
 
-### `npm run build`
+### Run `npm install` to install the deps for BE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## High level description
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project used multiple npm packages on both FE and on BE. Below are the detials of the packages used:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### React packages
 
-### `npm run eject`
+1. mui - Component Styling
+2. axios - External API calls
+3. redux - For state management
+4. sass - Custom CSS code
+5. WebSocket - To use web sockets
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Node packages
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. express - To credate http server
+2. nodemon - To listen for changes and auto restart server
+3. pg - to connect to PostGresql
+4. cors - To allow cross origin requests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Import the DB.sql to setup the database in local
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## DB Structure
 
-## Learn More
+DB Used: Postgres v15
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Schema - 1
+Tables - 2
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Schema Used: public
+Tables - user, connections
 
-### Code Splitting
+user table columns - username, email, password, fname, lname, last_login (date), last_pasword_change (date), photo_url
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+connections table columns - user_email, con_email, con_date, con_score

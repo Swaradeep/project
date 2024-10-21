@@ -1,0 +1,31 @@
+#list-root {
+  width: 25%;
+  height: 50vh;
+  overflow: scroll;
+  .rec-item,
+  .con-item {
+    &:hover {
+      background-color: #f5f5f555;
+    }
+
+    .rec-item-avatar,
+    .rec-item-avatar {
+      flex: 1;
+    }
+    .rec-item-name,
+    .con-item-name {
+      flex: 2;
+    }
+    .rec-item-add,
+    .con-item-name {
+      flex: 1;
+      border-radius: 20px;
+      width: 80px;
+      margin: 0px 10px;
+    }
+
+    .chat-btn {
+      color: white;
+    }
+  }
+}
